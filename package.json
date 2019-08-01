@@ -2,8 +2,16 @@
   "name": "@nadameu/pipe",
   "version": "1.0.0",
   "description": "Function that pipes sequential operations, given an initial value.",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nadameu/pipe.git"
@@ -17,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/nadameu/pipe/issues"
   },
-  "homepage": "https://github.com/nadameu/pipe#readme"
+  "homepage": "https://github.com/nadameu/pipe#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
 }
