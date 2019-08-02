@@ -5,12 +5,14 @@
   "type": "commonjs",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "lib/index.mjs",
   "files": [
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepublish": "npm run build"
+    "build": "rollup -c",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,9 @@
   },
   "homepage": "https://github.com/nadameu/pipe#readme",
   "devDependencies": {
+    "rimraf": "^2.6.3",
+    "rollup": "^1.18.0",
+    "rollup-plugin-typescript2": "^0.22.1",
     "typescript": "^3.5.3"
   }
 }
