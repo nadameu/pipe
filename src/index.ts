@@ -14,5 +14,3 @@ export function pipe<a,b,c,d,e,f,g,h,i,j,k> (x: a, f0: fn<a,b>, f1: fn<b,c>, f2:
 export function pipe(x:any, ...fs:any[]) {
 	return fs.reduce((y,f) => f(y), x);
 }
-
-export default pipe;
