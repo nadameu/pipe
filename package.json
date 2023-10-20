@@ -1,6 +1,6 @@
 {
   "name": "@nadameu/pipe",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Function that pipes sequential operations, given an initial value.",
   "keywords": [
     "pipe",
